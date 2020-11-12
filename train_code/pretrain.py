@@ -66,9 +66,9 @@ def train(args):
 
         sess.run(tf.compat.v1.global_variables_initializer())
         face_photo_dir = 'dataset/face_photo'
-        utils.load_image_list(face_photo_dir)
+        face_photo_list=utils.load_image_list(face_photo_dir)
         scenery_photo_dir = 'dataset/scenery_photo'
-        utils.load_image_list(scenery_photo_dir)
+        scenery_photo_list=utils.load_image_list(scenery_photo_dir)
 
 
         for total_iter in tqdm(range(args.total_iter)):
